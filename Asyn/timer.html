@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer Using SetInterval and SetTimeout</title>
+  </head>
+  <body>
+    <h2>Timer</h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const changeName = function () {
+      document.querySelector("h2").innerHTML = "Bitup Timer";
+    };
+    setTimeout(changeName, 3000);
+
+    const printDate = function () {
+      console.log("Hi", Date.now());
+    };
+
+    const start = document.querySelector("#start");
+    const stop = document.querySelector("#stop");
+    let intervalId;
+    start.addEventListener("click", function () {
+      intervalId = setInterval(printDate, 2000);
+    });
+
+    stop.addEventListener("click", function () {
+      clearInterval(intervalId);
+    });
+  </script>
+</html>
