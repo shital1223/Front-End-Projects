@@ -2,7 +2,7 @@ import React from "react";
 
 export const ShowTask = ({ tasklist, setTasklist, task, setTask }) => {
   const handleDelete = (id) => {
-    const updatedTaskList = tasklist.filter((todo) => todo.id != id);
+    const updatedTaskList = tasklist.filter((todo) => todo.id !== id);
     setTasklist(updatedTaskList);
   };
 
