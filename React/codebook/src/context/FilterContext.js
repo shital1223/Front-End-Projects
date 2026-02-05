@@ -1,5 +1,4 @@
-import { createContext, useReducer } from "react";
-import { useContext } from "react";
+import { createContext, useContext, useReducer } from "react";
 import { filterReducer } from "../reducers";
 
 const filterInitialState = {
@@ -47,23 +46,23 @@ export const FilterProvider = ({ children }) => {
   }
 
   function rating(products) {
-    if (state.ratings === "4STARABOVE") {
+    if (state.ratings === "4STARSABOVE") {
       return products.filter((product) => product.rating >= 4);
     }
-    if (state.ratings === "3STARABOVE") {
+    if (state.ratings === "3STARSABOVE") {
       return products.filter((product) => product.rating >= 3);
     }
-    if (state.ratings === "2STARABOVE") {
+    if (state.ratings === "2STARSABOVE") {
       return products.filter((product) => product.rating >= 2);
     }
-    if (state.ratings === "1STARABOVE") {
+    if (state.ratings === "1STARSABOVE") {
       return products.filter((product) => product.rating >= 1);
     }
     return products;
   }
 
   const filterProductList = rating(
-    sort(inStock(bestSeller(state.productList)))
+    sort(inStock(bestSeller(state.productList))),
   );
 
   const value = {

@@ -52,7 +52,7 @@ export const FilterBar = ({ setShow }) => {
                       payload: { sortBy: "lowtohigh" },
                     })
                   }
-                  checked={state.sortBy === "lowtohigh" || false}
+                  checked={state.sortBy === "lowtohigh"}
                   id="price-sort-1"
                   type="radio"
                   value=""
@@ -74,7 +74,7 @@ export const FilterBar = ({ setShow }) => {
                       payload: { sortBy: "hightolow" },
                     })
                   }
-                  checked={state.sortBy === "hightolow" || false}
+                  checked={state.sortBy === "hightolow"}
                   id="price-sort-2"
                   type="radio"
                   value=""
@@ -96,10 +96,10 @@ export const FilterBar = ({ setShow }) => {
                   onChange={() =>
                     dispatch({
                       type: "RATINGS",
-                      payload: { ratings: "4STARABOVE" },
+                      payload: { ratings: "4STARSABOVE" },
                     })
                   }
-                  checked={state.ratings === "4STARABOVE" || false}
+                  checked={state.ratings === "4STARSABOVE"}
                   id="rating-sort-1"
                   type="radio"
                   value=""
@@ -118,10 +118,10 @@ export const FilterBar = ({ setShow }) => {
                   onChange={() =>
                     dispatch({
                       type: "RATINGS",
-                      payload: { ratings: "3STARABOVE" },
+                      payload: { ratings: "3STARSABOVE" },
                     })
                   }
-                  checked={state.ratings === "3STARABOVE" || false}
+                  checked={state.ratings === "3STARSABOVE"}
                   id="rating-sort-2"
                   type="radio"
                   value=""
@@ -140,10 +140,10 @@ export const FilterBar = ({ setShow }) => {
                   onChange={() =>
                     dispatch({
                       type: "RATINGS",
-                      payload: { ratings: "2STARABOVE" },
+                      payload: { ratings: "2STARSABOVE" },
                     })
                   }
-                  checked={state.ratings === "2STARABOVE" || false}
+                  checked={state.ratings === "2STARSABOVE"}
                   id="rating-sort-3"
                   type="radio"
                   value=""
@@ -162,10 +162,10 @@ export const FilterBar = ({ setShow }) => {
                   onChange={() =>
                     dispatch({
                       type: "RATINGS",
-                      payload: { ratings: "1STARABOVE" },
+                      payload: { ratings: "1STARSABOVE" },
                     })
                   }
-                  checked={state.ratings === "1STARABOVE" || false}
+                  checked={state.ratings === "1STARSABOVE"}
                   id="rating-sort-4"
                   type="radio"
                   value=""
@@ -190,7 +190,7 @@ export const FilterBar = ({ setShow }) => {
                       payload: { bestSellerOnly: !state.bestSellerOnly },
                     })
                   }
-                  checked={state.bestSellerOnly || false}
+                  checked={state.bestSellerOnly}
                   id="best-seller"
                   type="checkbox"
                   value=""
@@ -211,7 +211,7 @@ export const FilterBar = ({ setShow }) => {
                       payload: { onlyInStock: !state.onlyInStock },
                     })
                   }
-                  checked={state.onlyInStock || false}
+                  checked={state.onlyInStock}
                   id="only-instock"
                   type="checkbox"
                   value=""
