@@ -1,6 +1,26 @@
+import { useEffect, useState } from "react";
 import { useCart } from "../../../context/CartContext";
 export const Checkout = ({ setCheckout }) => {
   const { total } = useCart();
+  const [user, setUser] = useState({});
+
+  useEffect(() => {
+    const token = JSON.parse(sessionStorage.getItem("token"));
+    const cbid = JSON.parse(sessionStorage.getItem("cbid"));
+
+    async function getUser() {
+      const response = await fetch(`http://localhost:8000/600/users/${cbid}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      const data = await response.json();
+      setUser(data);
+    }
+    getUser();
+  }, []);
   return (
     <section>
       <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
@@ -51,7 +71,7 @@ export const Checkout = ({ setCheckout }) => {
                     name="name"
                     id="name"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:value-gray-400 dark:text-white"
-                    value="Shital Patil"
+                    value={user.name || ""}
                     disabled
                     required=""
                   />
@@ -68,7 +88,7 @@ export const Checkout = ({ setCheckout }) => {
                     name="email"
                     id="email"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:value-gray-400 dark:text-white"
-                    value="shital@example.com"
+                    value={user.email || ""}
                     disabled
                     required=""
                   />
