@@ -1,26 +1,39 @@
 import { useEffect, useState } from "react";
 import { useCart } from "../../../context/CartContext";
+import { useNavigate } from "react-router-dom";
+import { createOrder, getUser } from "../../../services";
+import { toast } from "react-toastify";
+
 export const Checkout = ({ setCheckout }) => {
-  const { total } = useCart();
+  const { cartList, total, clearCart } = useCart();
   const [user, setUser] = useState({});
 
-  useEffect(() => {
-    const token = JSON.parse(sessionStorage.getItem("token"));
-    const cbid = JSON.parse(sessionStorage.getItem("cbid"));
+  const navigate = useNavigate();
 
-    async function getUser() {
-      const response = await fetch(`http://localhost:8000/600/users/${cbid}`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      const data = await response.json();
-      setUser(data);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const data = await getUser();
+        setUser(data);
+      } catch (error) {
+        toast.error(error.message, { closeButton: true });
+      }
     }
-    getUser();
+    fetchData();
   }, []);
+
+  async function handleOrderSubmit(event) {
+    event.preventDefault();
+
+    try {
+      const data = await createOrder(cartList, total, user);
+      clearCart();
+      navigate("/order-summary", { state: { data: data, status: true } });
+    } catch (error) {
+      navigate("/order-summary", { state: { status: false } });
+    }
+  }
+
   return (
     <section>
       <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
@@ -58,7 +71,7 @@ export const Checkout = ({ setCheckout }) => {
               <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">
                 <i className="bi bi-credit-card mr-2"></i>CARD PAYMENT
               </h3>
-              <form className="space-y-6">
+              <form onSubmit={handleOrderSubmit} className="space-y-6">
                 <div>
                   <label
                     htmlFor="name"

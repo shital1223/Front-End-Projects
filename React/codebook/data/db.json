@@ -244,12 +244,6 @@
       "password": "$2a$10$GbYzaWYawFns4s99dgGfYOtKMwaqs6695gTPttLezUNS8BkII4V.q",
       "name": "Shital Patil",
       "id": 1
-    },
-    {
-      "email": "Mishita@example.com",
-      "password": "$2a$10$00nPHVfxk4Z2FYDirwLN5.lEVox1W5cSQ2Y2xfA7Y2hIAhMgQFSEa",
-      "name": "mishita mahajan",
-      "id": 2
     }
   ]
 }

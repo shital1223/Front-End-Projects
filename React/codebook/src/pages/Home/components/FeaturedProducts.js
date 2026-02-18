@@ -1,14 +1,19 @@
 import { useState, useEffect } from "react";
 import { ProductCard } from "../../../components";
+import { getFeaturedProduct } from "../../../services";
+import { toast } from "react-toastify";
 
 export const FeaturedProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     async function fetchFeaturedProducts() {
-      const response = await fetch("http://localhost:8000/featured_products");
-      const data = await response.json();
-      setProducts(data);
+      try {
+        const data = await getFeaturedProduct();
+        setProducts(data);
+      } catch (error) {
+        toast.error(error.message, { closeButton: true });
+      }
     }
     fetchFeaturedProducts();
   }, []);

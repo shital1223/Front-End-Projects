@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import { ProductCard } from "../../components";
-import { FilterBar } from "./components/FilterBar";
 import { useLocation } from "react-router-dom";
 import { useTitle } from "../../hooks/useTitle";
 import { useFilter } from "../../context";
+import { ProductCard } from "../../components";
+import { FilterBar } from "./components/FilterBar";
+import { getProductList } from "../../services";
+import { CloseButton, toast } from "react-toastify";
 
 export const ProductsList = () => {
   const { products, initProductList } = useFilter();
@@ -13,14 +15,15 @@ export const ProductsList = () => {
   useTitle("Explore eBooks Collection");
 
   useEffect(() => {
-    async function fetchAllProducts() {
-      const response = await fetch(
-        `http://localhost:8000/products?name_like=${searchTerm ? searchTerm : ""}`,
-      );
-      const data = await response.json();
-      initProductList(data);
+    async function fetchProducts() {
+      try {
+        const data = await getProductList(searchTerm);
+        initProductList(data);
+      } catch (error) {
+        toast.error(error.message, { closeButton: true });
+      }
     }
-    fetchAllProducts();
+    fetchProducts();
   }, [searchTerm, initProductList]);
   return (
     <main>
