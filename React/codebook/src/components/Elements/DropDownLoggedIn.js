@@ -18,7 +18,7 @@ export const DropdownLoggedIn = ({ setDropdown }) => {
       }
     }
     fetchData();
-  }, []);
+  }, [handleLogout]);
 
   function handleLogout() {
     logout();

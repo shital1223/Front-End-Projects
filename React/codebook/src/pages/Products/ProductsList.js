@@ -5,7 +5,7 @@ import { useFilter } from "../../context";
 import { ProductCard } from "../../components";
 import { FilterBar } from "./components/FilterBar";
 import { getProductList } from "../../services";
-import { CloseButton, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 export const ProductsList = () => {
   const { products, initProductList } = useFilter();
@@ -20,7 +20,7 @@ export const ProductsList = () => {
         const data = await getProductList(searchTerm);
         initProductList(data);
       } catch (error) {
-        toast.error(error.message, { closeButton: true });
+        toast.error(error.message);
       }
     }
     fetchProducts();
