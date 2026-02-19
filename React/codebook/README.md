@@ -82,3 +82,7 @@ Run the following command from the project root:
 ### to make user authentication working run json auth server as well.
 
 ### `json-server data/db.json -m ./node_modules/json-server-auth --port 8000`
+
+### OR
+
+`npx json-server data/db.json -m ./node_modules/json-server-auth --port 8000`
