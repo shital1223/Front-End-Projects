@@ -26,9 +26,17 @@ CodeBook is a React-based mini e-commerce bookstore application that demonstrate
 ### Order Summary
 ![Order Summary](./screenshots/order-summary.png)
 
-### Search Functionality
+### Search 
 ![Search](./screenshots/search.png)
 
+### Register 
+![Register](./screenshots/register.png)
+
+### Login
+![Login](./screenshots/login.png)
+
+### Payment
+![Payment](./screenshots/payment.png)
 
 
 ---
