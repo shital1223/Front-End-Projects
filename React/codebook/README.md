@@ -1,88 +1,174 @@
-# Getting Started with Create React App
+# 📚 CodeBook
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CodeBook is a React-based mini e-commerce bookstore application that demonstrates modern front-end development practices including product browsing, filtering, sorting, shopping cart management, authentication, and a simulated checkout workflow.
 
-## Available Scripts
+🚀 Live Demo   🔗 https://codebook-s.netlify.app/
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Homepage
+![Homepage](./screenshots/homepage.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Products(Books) List Page
+![All Products](./screenshots/all-products.png)
 
-### `npm test`
+### Product Details Page
+![Product Details](./screenshots/product-details.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Filter Products
+![Filter Products](./screenshots/filter.png)
 
-### `npm run build`
+### Cart Page
+![Cart](./screenshots/cart.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Order Summary
+![Order Summary](./screenshots/order-summary.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Search Functionality
+![Search](./screenshots/search.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
+## 🚀 Features
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### 📚 Book Browsing
+Browse a collection of books displayed with cover images, titles, prices, and ratings in a clean grid layout.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### 🔎 Search Functionality
+Quickly search books by title or keyword with instant filtering of results.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### 🎯 Smart Filtering
+Filter books based on:
+- ⭐ Rating
+- 🔥 Best Sellers
+- 📦 In-Stock Availability
 
-## Learn More
+#### ↕️ Price Sorting
+Sort books based on price to easily find:
+- Lowest priced books
+- Highest priced books
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 📖 Book Details Page
+View detailed information about a book including description, rating, price, and availability.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### 🛒 Shopping Cart
+Add books to the cart, remove items, and manage selected books before checkout.
 
-### Code Splitting
+#### 📄 Cart Page
+Displays all selected books with quantity, individual price, and total order value.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### 📦 Order Summary
+Shows a breakdown of the purchase including selected items and final total before payment.
 
-### Analyzing the Bundle Size
+#### 💳 Payment Popup
+Simulated payment popup that allows users to confirm and complete their order.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### 🔐 User Authentication
+Includes login and registration functionality to simulate a user-based experience.
 
-### Making a Progressive Web App
+#### 👤 Guest Login
+Allows users to explore the application and simulate purchases without creating an account.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### 🧭 Routing with React Router
+Smooth navigation between:
+- Book listing
+- Book details
+- Cart page
+- Login / Registration pages
 
-### Advanced Configuration
+#### 📱 Responsive Design
+Fully responsive layout optimized for desktop, tablet, and mobile devices.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### 🧩 Component-Based Architecture
+Built using reusable React components for better scalability and maintainability.
+
+
+---
+## 🛠 Tech Stack
+
+### Frontend
+- ⚛️ **React** – Component-based UI development
+- 🟨 **JavaScript (ES6+)** – Application logic
+- 🌐 **HTML5** – Page structure
+- 🎨 **CSS3** – Styling and layout
+
+### Routing
+- 🔀 **React Router** – Client-side navigation between pages
+
+### State Management
+- 🧠 **React Hooks** – Managing component state and side effects
+
+### UI / Design
+- 🎯 **Responsive Design** – Optimized for desktop, tablet, and mobile devices
+
+### Development Tools
+- 📦 **npm** – Dependency management
+- 🧑‍💻 **VS Code** – Development environment
 
 ### Deployment
+- 🌐 **Netlify** – Hosting and continuous deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 📡 Data Source / Mock API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The application uses a **mocked REST API** to simulate a backend service for book data.  
+The mock server is deployed on **Render**, allowing the frontend application to fetch book information just like a real production API.
 
-## Mock API Setup (JSON Server)
+- Backend Repository: https://github.com/shital1223/codebook-mock-server
+- Deployment: Render
 
-This project uses **JSON Server** to mock backend APIs during development.
+---
 
-### Start the API server
+## ⚙️ Installation & Setup
 
-Run the following command from the project root:
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/shital1223/Front-End-Projects.git
 
-### `npx json-server --watch data/db.json --port 8000`
+2. **Navigate to the Codebook project**
+   ```bash
+   cd Front-End-Projects/React/codebook
+   
+3. **Install dependencies**
+   ```bash
+   npm install
 
-### to make user authentication working run json auth server as well.
+4. **Start the development server**
+   ```bash
+   npm start
 
-### `json-server data/db.json -m ./node_modules/json-server-auth --port 8000`
+5. Open http://localhost:3000 to view the app.
+   
+---
 
-### OR
+## 📂 Project Structure
+``` codebook/
+├── public/
+├── src/
+│   ├── components/      # Reusable UI components
+│   ├── pages/           # Pages like Home, BookDetails etc.
+│   ├── data/            # Book data
+│   ├── hooks/           # Custom Hooks
+│   ├── App.js
+│   ├── index.js
+│   └── App.css
+│
+├── screenshots/         # Project screenshots
+├── package.json
+└── README.md
 
-`npx json-server data/db.json -m ./node_modules/json-server-auth --port 8000`
+```
+---
+## 👨‍💻 Author
+
+**Shital Patil**
+
+Software Engineer delivering high-quality applications while staying curious and up-to-date with emerging technologies.
+
+- GitHub: https://github.com/shital1223
+- LinkedIn: [https://www.linkedin.com/in/your-linkedin](https://www.linkedin.com/in/shital-patil-498372102/)
+- Portfolio: Coming soon
