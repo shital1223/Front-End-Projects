@@ -23,28 +23,28 @@ Explore movies, see details, and enjoy a smooth, responsive cinematic UI.
 
 ## 🚀 Features
 
-### 🎬 Browse Movies
+#### 🎬 Browse Movies
 Explore a collection of movies displayed with posters, titles, and ratings in a clean and visually appealing layout.
 
-### 📖 Movie Details
+#### 📖 Movie Details
 Click on any movie to view detailed information including overview, rating, release date, genres, budget, revenue etc.
 
-### 🔍 Search Functionality
+#### 🔍 Search Functionality
 Search for movies by name and get instant results as you type.
 
-### ⚡ Real-Time Movie Data
+#### ⚡ Real-Time Movie Data
 Fetches movie data dynamically from the **TMDB API**, ensuring updated movie information.
 
-### 🧭 Seamless Navigation
+#### 🧭 Seamless Navigation
 Implemented using **React Router** to enable smooth navigation between the homepage and movie details pages.
 
-### 🎨 Modern UI with Tailwind CSS
+#### 🎨 Modern UI with Tailwind CSS
 Built with **Tailwind CSS** for a modern, responsive, and visually polished user interface.
 
-### 🧩 Reusable Components
+#### 🧩 Reusable Components
 Structured using reusable components like **Header**, **Footer**, and **MovieCard** for better scalability and maintainability.
 
-### 📱 Responsive Design
+#### 📱 Responsive Design
 Fully responsive layout optimized for **desktop, tablet, and mobile devices**.
 
 ---
