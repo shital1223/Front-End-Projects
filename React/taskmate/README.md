@@ -1,70 +1,131 @@
-# Getting Started with Create React App
+# 📚 TaskMate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+TaskMate is a simple and clean React-based Todo application that helps users manage daily tasks efficiently.  
+Users can quickly add tasks, view them in a list, and remove tasks once completed.
 
-## Available Scripts
+🚀 Live Demo  
+🔗 https://todoapp-taskmate.netlify.app/
 
-In the project directory, you can run:
+---
 
-### `npm start`
+# 🎥 App Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### ➕ Add Task
+![Add Task](./screenshots/gifs/add-task.gif)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ❌ Remove Single Task
+![Remove Task](./screenshots/gifs/remove-task.gif)
 
-### `npm test`
+### 🧹 Clear All Tasks
+![Clear Tasks](./screenshots/gifs/clear-task.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🎨 Theme Toggle
+![Theme Change](./screenshots/gifs/theme-toggle.gif)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### 📝 Add Tasks
+Quickly add new tasks using the input field and keep track of daily activities.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### 📋 Task List
+All added tasks appear in a clean and organized list.
 
-### `npm run eject`
+#### ❌ Remove Individual Tasks
+Users can delete a single task once it is completed.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### 🧹 Clear All Tasks
+Clear the entire task list instantly with one click.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### 🎨 Theme Switching
+Users can switch between different UI themes for a better visual experience.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### 💾 Persistent Todo Storage
+All tasks are stored in **Local Storage**, ensuring that the task list remains available even after refreshing or reopening the browser.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### ⚡ Instant UI Updates
+Tasks update instantly using **React state** without requiring a page refresh.
 
-## Learn More
+#### 🧩 Component-Based Architecture
+Built using reusable React components for better maintainability.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 📱 Responsive Design
+Works smoothly across desktop and mobile devices.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🛠 Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Frontend
+- ⚛️ **React**
+- 🟨 **JavaScript (ES6+)**
+- 🌐 **HTML5**
+- 🎨 **CSS3**
 
-### Analyzing the Bundle Size
+### State Management
+- 🧠 **React Hooks (useState)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Browser Storage
+- 💾 **Local Storage API** – Persisting Todo tasks
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Development Tools
+- 📦 **npm**
+- 🧑‍💻 **VS Code**
 
 ### Deployment
+- 🌐 **Netlify**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## ⚙️ Installation & Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/shital1223/Front-End-Projects.git
+
+2. **Navigate to the Codebook project**
+   ```bash
+   cd Front-End-Projects/React/taskmate
+   
+3. **Install dependencies**
+   ```bash
+   npm install
+
+4. **Start the development server**
+   ```bash
+   npm start
+
+5. Open http://localhost:3000 to view the app.
+
+---
+
+## 📂 Project Structure
+``` codebook/
+taskmate/
+├── public/
+├── src/
+│   ├── components/
+│   ├── App.js
+│   ├── index.js
+│   └── App.css
+│
+├── screenshots/
+│   └── gifs/
+│       ├── add-task.gif
+│       ├── remove-task.gif
+│       ├── clear-task.gif
+│       └── theme-toggle.gif
+│
+├── package.json
+└── README.md
+```
+---
+## 👨‍💻 Author
+
+**Shital Patil**
+
+Software Engineer delivering high-quality applications while staying curious and up-to-date with emerging technologies.
+
+- GitHub: https://github.com/shital1223
+- LinkedIn: [https://www.linkedin.com/in/your-linkedin](https://www.linkedin.com/in/shital-patil-498372102/)
